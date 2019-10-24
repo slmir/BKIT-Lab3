@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Lab2
+namespace Lab2Test
 {
 	public class Circle : Figure, IPrint//наследуется от абстрактного класса Figures и реализует интерфес IPtint
 	{

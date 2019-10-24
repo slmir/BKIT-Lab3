@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
-namespace Lab2Test
+namespace Lab2
 {
-	public class ProgramLR2
-	{
-		/// <summary>
-		/// Version 1.0.6
-		/// 
-		/// </summary>
+		public class ProgramLR2
+		{
 			static void Main(string[] args)
 			{
 				Console.Title = "Мирсонов Вячеслав РТ5-31Б";
@@ -21,7 +16,7 @@ namespace Lab2Test
 				{
 					Console.WriteLine("Выберете одну из предлложенных фигур, площадь которой вы хотите вычислить: \n");
 					Console.ForegroundColor = ConsoleColor.Green;
-					Console.WriteLine("1. Прямоугольник \n2. Квадрат \n3. Круг");//вывод возможных вариантов
+					Console.WriteLine("1. Прямоугольник \n2. Квадрат \n3. Окружность");//вывод возможных вариантов
 					Console.ForegroundColor = ConsoleColor.Gray;
 					Console.Write("\nВведите номер выбранного варианта: ");
 					char v = Convert.ToChar(Console.ReadLine());//ожидание ввода выбранного варианта
@@ -45,7 +40,7 @@ namespace Lab2Test
 							obj2.Print();//вызов метода печати данных об объекте (выбранной геометрической фигуре)
 							break;
 						case '3':
-							Console.Write("Введите радиус круга: ");
+							Console.Write("Введите радиус окружности: ");
 							double rd = Convert.ToDouble(Console.ReadLine());//радиус круга
 							Circle obj3 = new Circle(rd);//создание объекта класса Круг и передача введеного ранее параметра в конструктор
 							Console.ForegroundColor = ConsoleColor.Green;
@@ -59,5 +54,5 @@ namespace Lab2Test
 				} while (str == "да");//пока пользователь желает продолжать выполнение программы
 				Console.ReadLine();
 			}
-	}
+		}
 }

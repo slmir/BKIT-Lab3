@@ -3,33 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FigureCollections
+namespace Lab2
 {
 	public class Circle : Figure, IPrint
 	{
-		/// <summary>
-		/// Ширина
-		/// </summary>
-		double radius;
-
-		/// <summary>
-		/// Основной конструктор
-		/// </summary>
-		/// <param name="ph">Высота</param>
-		/// <param name="pw">Ширина</param>
-		public Circle(double pr)
+		double radius;//радиус фигуры
+		public Circle(double rad)//конструктор
 		{
-			this.radius = pr;
-			this.Type = "Круг";
+			this.radius = rad;
+			this.Type = "Окружность";
 		}
-
-		public override double Area()
+		public override double Area()//переопределяем метод вычисления площади
 		{
-			double Result = Math.PI * this.radius * this.radius;
-			return Result;
+			double S = Math.Round(Math.Pow(this.radius, 2) * Math.PI, 4);//переопределение функции нахождения площади круга с точностью до 4-ого знака после запятой
+			return S;
 		}
-
-		public void Print()
+		public void Print()//вывод данных об объекте
 		{
 			Console.WriteLine(this.ToString());
 		}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FigureCollections;
+using Lab2;
 
 namespace Lab3
 {
@@ -12,47 +12,60 @@ namespace Lab3
 	{
 		static void Main(string[] args)
 		{
-			//+++++++++++++++++++++++++++++++++++++++++++++++++
-			Rectangle rect = new Rectangle(5, 4);
-			Square square = new Square(5);
+			Console.Title = "Мирсонов Вячеслав РТ5-31Б";
+			Rectangle rect = new Rectangle(10, 12);
+			Square square = new Square(15);
 			Circle circle = new Circle(10);
 
-			//+++++++++++++++++++++++++++++++++++++++++++++++++
-			Console.WriteLine("\nArrayList");
-			ArrayList a = new ArrayList();
-			a.Add(circle);
-			a.Add(rect);
-			a.Add(square);
+			/*Необощенный список*/
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("\nКоллекция класса ArrayList");
+			Console.ForegroundColor = ConsoleColor.Gray;
+			ArrayList AL = new ArrayList();
+			AL.Add(circle);
+			AL.Add(rect);
+			AL.Add(square);
+			Console.WriteLine("Перед сортировкой:");
+			foreach (object o in AL)
+			{
+				string type = o.GetType().Name;
+				Console.WriteLine(o.ToString());
+			}
 
-			foreach (var x in a)
+			Console.WriteLine("\nПосле сортировки:");
+			AL.Sort();
+			foreach (object o in AL)
+			{
+				string type = o.GetType().Name;
+				Console.WriteLine(o.ToString());
+			}
+
+			/*Коллекция класса Figure*/
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("\nКоллекция класса List<Figure>");
+			Console.ForegroundColor = ConsoleColor.Gray;
+			List<Figure> LF = new List<Figure>();
+			LF.Add(circle);
+			LF.Add(rect);
+			LF.Add(square);
+			Console.WriteLine("Перед сортировкой:");
+			foreach (var x in LF)
 				Console.WriteLine(x);
 
-			Console.WriteLine("\nArrayList - сортировка");
-			a.Sort();
-			foreach (var x in a)
+			Console.WriteLine("\nПосле сортировки:");
+			LF.Sort();
+			foreach (var x in LF)
 				Console.WriteLine(x);
-			//+++++++++++++++++++++++++++++++++++++++++++++++++
-			Console.WriteLine("\nList<Figure>");
-			List<Figure> fl = new List<Figure>();
-			fl.Add(circle);
-			fl.Add(rect);
-			fl.Add(square);
-
-			foreach (var x in fl) Console.WriteLine(x);
-
-			Console.WriteLine("\nList<Figure> - сортировка");
-			fl.Sort();
-			foreach (var x in fl) Console.WriteLine(x);
 
 			//+++++++++++++++++++++++++++++++++++++++++++++++++
-			/*Console.WriteLine("\nМатрица");
+			Console.WriteLine("\nМатрица");
 			Matrix3D<Figure> cube = new Matrix3D<Figure>(3, 3, 3, null);
 			cube[0, 0, 0] = rect;
 			cube[1, 1, 1] = square;
 			cube[2, 2, 2] = circle;
 			Console.WriteLine(cube.ToString());
 
-			//+++++++++++++++++++++++++++++++++++++++++++++++++
+			/*
 			Console.WriteLine("\nСтек");
 			SimpleStack<Figure> stack = new SimpleStack<Figure>();
 			stack.Push(rect);
@@ -63,8 +76,8 @@ namespace Lab3
 			{
 				Figure f = stack.Pop();
 				Console.WriteLine(f);
-			}*/
-
+			}
+			*/
 			Console.ReadLine();
 		}
 	}

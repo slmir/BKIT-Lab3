@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1\Lab1.csproj", "{909E3E3C-AF10-41EE-BD20-648C5B4A3F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab_2\Lab2.csproj", "{9A95067D-9189-48E6-830D-AC86B43FD68F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Test", "Lab_2\Lab2Test.csproj", "{9A95067D-9189-48E6-830D-AC86B43FD68F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{CD00C84B-B310-47E2-B887-C047D017F37D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureCollections", "test\FigureCollections.csproj", "{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "test\Lab2.csproj", "{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
