@@ -57,16 +57,24 @@ namespace Lab3
 			foreach (var x in LF)
 				Console.WriteLine(x);
 
-			//+++++++++++++++++++++++++++++++++++++++++++++++++
+			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("\nМатрица");
+			Console.ForegroundColor = ConsoleColor.Gray;
 			Matrix3D<Figure> cube = new Matrix3D<Figure>(3, 3, 3, null);
 			cube[0, 0, 0] = rect;
 			cube[1, 1, 1] = square;
 			cube[2, 2, 2] = circle;
 			Console.WriteLine(cube.ToString());
-
-			/*
-			Console.WriteLine("\nСтек");
+			
+			
+			Console.WriteLine("\nМатрица");
+			Matrix<Figure> matrix = new Matrix<Figure>(3, 3, new FigureMatrixCheckEmpty());
+			matrix[0, 0] = rect;
+			matrix[1, 1] = square;
+			matrix[2, 2] = circle;
+			Console.WriteLine(matrix.ToString());
+			
+			/*Console.WriteLine("\nСтек");
 			SimpleStack<Figure> stack = new SimpleStack<Figure>();
 			stack.Push(rect);
 			stack.Push(square);

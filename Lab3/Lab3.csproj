@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMatrix3DCheckEmpty.cs" />
-    <Compile Include="Matrix.cs" />
     <Compile Include="ProgramLR3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
