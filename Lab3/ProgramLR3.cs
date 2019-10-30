@@ -67,7 +67,7 @@ namespace Lab3
 			Console.WriteLine(cube.ToString());
 			
 			
-			Console.WriteLine("\nМатрица");
+			/*Console.WriteLine("\nМатрица");
 			Matrix<Figure> matrix = new Matrix<Figure>(3, 3, new FigureMatrixCheckEmpty());
 			matrix[0, 0] = rect;
 			matrix[1, 1] = square;

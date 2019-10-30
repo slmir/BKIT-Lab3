@@ -7,116 +7,80 @@ namespace Lab2
 {
 	public class Matrix3D<T>
 	{
-		/// <summary>
-		/// Словарь для хранения значений
-		/// </summary>
-		Dictionary<string, T> _matrix = new Dictionary<string, T>();
-
-		/// <summary>
-		/// Количество элементов по горизонтали (максимальное количество столбцов)
-		/// </summary>
-		int maxX;
-
-		/// <summary>
-		/// Количество элементов по вертикали (максимальное количество строк)
-		/// </summary>
-		int maxY;
-
-		/// <summary>
-		/// Добавленное измерение
-		/// </summary>
-		int maxZ;
-
-		/// <summary>
-		/// Пустой элемент, который возвращается если элемент с нужными координатами не был задан
-		/// </summary>
-		T nullElement;
-
-		/// <summary>
-		/// Конструктор
-		/// </summary>
-		public Matrix3D(int px, int py, int pz, T nullElementParam)
+        /*Основная структура данных для хранения трехмерной разреженной матрицы - словарь _matrix*/
+        Dictionary<string, T> _matrix = new Dictionary<string, T>();//описание словаря для хранения значений
+        int maxST_X;//количество элементов трехмерной матрицы по горизонтали (максимальное количество столбцов)
+        int maxSTR_Y;// количество элементов трехмерной матрицы по вертикали (максимальное количество строк)
+        int maxGL_Z;//количество элементов трехмерной матрицы в глубину
+        T NullElem;//пустой элемент типа T(передаваемый тип матрицы), который возвращается если элемент с нужными координатами не был задан
+		public Matrix3D(int x, int y, int z, T NullElement)//конструктор
 		{
-			this.maxX = px;
-			this.maxY = py;
-			this.maxZ = pz;
-			this.nullElement = nullElementParam;
+			this.maxST_X = x;
+			this.maxSTR_Y = y;
+			this.maxGL_Z = z;
+			this.NullElem = NullElement;
 		}
 
-		/// <summary>
-		/// Индексатор для доступа к данных
-		/// </summary>
-		public T this[int x, int y, int z]
-		{
+		public T this[int x, int y, int z]//индексатор для доступа к данных
+        {
+            set
+            {
+                CheckBounds(x, y, z);//метод проверки границ
+                string key = DictKey(x, y, z);//метод формирования ключа
+                this._matrix.Add(key, value);//добавление в матрицу значения по ключу (x,y)
+            }
 			get
 			{
 				CheckBounds(x, y, z);
 				string key = DictKey(x, y, z);
-				if (this._matrix.ContainsKey(key))
+				if (this._matrix.ContainsKey(key))//если матрица (словарь) содержит рассматриваемый ключ (ключи задаются в ProgramLR3 после инициализации матрицы)
 				{
-					return this._matrix[key];
+					return this._matrix[key];//возвращение ключа
 				}
 				else
 				{
-					return this.nullElement;
+					return this.NullElem;//возвращение нулевого/пустого значения
 				}
 			}
-			set
-			{
-				CheckBounds(x, y, z);
-				string key = DictKey(x, y, z);
-				this._matrix.Add(key, value);
-			}
+        }
+
+		void CheckBounds(int x, int y, int z)//метод проверки выхода за границы рассматриваемой трехмерной разреженной матрицы
+        {
+			if (x < 0 || x >= this.maxST_X)
+                throw new Exception("x=" + x + " выходит за границы");
+			if (y < 0 || y >= this.maxSTR_Y)
+                throw new Exception("y=" + y + " выходит за границы");
+			if (z < 0 || z >= this.maxGL_Z)
+                throw new Exception("z=" + z + " выходит за границы");
 		}
 
-		/// <summary>
-		/// Проверка границ
-		/// </summary>
-		void CheckBounds(int x, int y, int z)
+		string DictKey(int x, int y, int z)//формирования ключа на основе индексов ячейки трехмерной разреженной матрицы
 		{
-			if (x < 0 || x >= this.maxX) throw new Exception("x=" + x + " выходит за границы");
-			if (y < 0 || y >= this.maxY) throw new Exception("y=" + y + " выходит за границы");
-			if (z < 0 || z >= this.maxZ) throw new Exception("z=" + z + " выходит за границы");
+			return x.ToString() + "_" + y.ToString() + "_" + z.ToString();//для элемента, находящегося в ячейке [1,0,2] его ключ будет записан в виде "1_0_2"
 		}
 
-		/// <summary>
-		/// Формирование ключа
-		/// </summary>
-		string DictKey(int x, int y, int z)
-		{
-			return x.ToString() + "_" + y.ToString() + "_" + z.ToString();
-		}
-
-		/// <summary>
-		/// Приведение к строке
-		/// </summary>
-		/// <returns></returns>
 		public override string ToString()
 		{
-			//Класс StringBuilder используется для построения длинных строк
-			//Это увеличивает производительность по сравнению с созданием и склеиванием 
-			//большого количества обычных строк
-
-			StringBuilder b = new StringBuilder();
-
-			b.Append("Вывод плоскостей XY при фиксированных значениях Z\n");
-			for (int k = 0; k < this.maxZ; k++)
+            StringBuilder b = new StringBuilder();
+            Console.WriteLine("Вывод 'срезов' матрицы по значениям глубины z\nТо есть выводятся двумерные матрицы (параметры x и y) по очереди в соответствии текущему значению z");
+			for (int k = 0; k < this.maxGL_Z; k++)
 			{
-				b.Append("z=" + k + "\n");
-				for (int j = 0; j < this.maxY; j++)
+				b.Append("\n" + "Для значения " +"z = " + k + "\n");
+				for (int j = 0; j < this.maxSTR_Y; j++)
 				{
-					b.Append("[");
-					for (int i = 0; i < this.maxX; i++)
+					b.Append("[");//открывающая строку двумерного массива скобка
+					for (int i = 0; i < this.maxST_X; i++)
 					{
-						if (i > 0) b.Append("\t");
-						T temp = this[i, j, k];
-						if (temp != null)
+						if (i > 0)
+                            b.Append("\t");//добавление табуляции, если рассматриваемый элемент не первый (нулевой) в строке двумерной матрицы
+						T t = this[i, j, k];//параметр типа T (передаваемого), в который кладется значение рассматриваемой ячейки трехмерной разреженной матрицы
+						if (t!= null)//если параметр не пустой
 						{
-							b.Append(temp.ToString());
+							b.Append(t.ToString());//в двумерную матрицу добавляется результат работы переопределенного для каждого конкрентого класса метода ToString 
 						}
 						else
 						{
-							b.Append("-");
+							b.Append(" - ");//
 						}
 					}
 					b.Append("]\n");

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.47
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1\Lab1.csproj", "{909E3E3C-AF10-41EE-BD20-648C5B4A3F98}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{CD00C84B-B310-47E2-B887-C047D017F37D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "test\Lab2.csproj", "{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_Vager-Fisher", "Example_Vager-Fisher\Example_Vager-Fisher.csproj", "{0B36CC20-C928-4FF1-9E52-C39B4FD658EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2BEA9B-868E-4B4B-B851-3AF80C5D3129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B36CC20-C928-4FF1-9E52-C39B4FD658EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B36CC20-C928-4FF1-9E52-C39B4FD658EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B36CC20-C928-4FF1-9E52-C39B4FD658EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B36CC20-C928-4FF1-9E52-C39B4FD658EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

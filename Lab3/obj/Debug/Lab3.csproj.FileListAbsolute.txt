@@ -9,3 +9,14 @@ C:\Git\ЛР1-3\Lab1\Lab3\obj\Debug\Lab3.pdb
 C:\Git\ЛР1-3\Lab1\Lab3\bin\Debug\test.exe
 C:\Git\ЛР1-3\Lab1\Lab3\bin\Debug\test.pdb
 C:\Git\ЛР1-3\Lab1\Lab3\bin\Debug\test.exe.config
+C:\Git\ttest\Lab3\bin\Debug\Lab3.exe.config
+C:\Git\ttest\Lab3\bin\Debug\Lab3.exe
+C:\Git\ttest\Lab3\bin\Debug\Lab3.pdb
+C:\Git\ttest\Lab3\bin\Debug\test.exe
+C:\Git\ttest\Lab3\bin\Debug\test.pdb
+C:\Git\ttest\Lab3\bin\Debug\test.exe.config
+C:\Git\ttest\Lab3\obj\Debug\Lab3.csprojAssemblyReference.cache
+C:\Git\ttest\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Git\ttest\Lab3\obj\Debug\Lab3.csproj.CopyComplete
+C:\Git\ttest\Lab3\obj\Debug\Lab3.exe
+C:\Git\ttest\Lab3\obj\Debug\Lab3.pdb
