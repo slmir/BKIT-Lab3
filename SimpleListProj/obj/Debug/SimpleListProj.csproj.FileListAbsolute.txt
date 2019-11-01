@@ -1,0 +1,11 @@
+C:\Git\ЛР3 ласт\SimpleListProj\obj\Debug\SimpleListProj.csprojAssemblyReference.cache
+C:\Git\ЛР3 ласт\SimpleListProj\obj\Debug\SimpleListProj.csproj.CoreCompileInputs.cache
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\SimpleListProj.exe.config
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\SimpleListProj.exe
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\SimpleListProj.pdb
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\test.exe
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\test.pdb
+C:\Git\ЛР3 ласт\SimpleListProj\bin\Debug\test.exe.config
+C:\Git\ЛР3 ласт\SimpleListProj\obj\Debug\SimpleListProj.csproj.CopyComplete
+C:\Git\ЛР3 ласт\SimpleListProj\obj\Debug\SimpleListProj.exe
+C:\Git\ЛР3 ласт\SimpleListProj\obj\Debug\SimpleListProj.pdb

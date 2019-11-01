@@ -7,6 +7,7 @@ namespace Lab2
 {
 	public class Square : Rectangle, IPrint
 	{
+		public Square() { }
 		public Square(double side_size) : base(side_size, side_size)
 		{
 			this.Type = "Квадрат";

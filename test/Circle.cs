@@ -8,6 +8,7 @@ namespace Lab2
 	public class Circle : Figure, IPrint
 	{
 		double radius;//радиус фигуры
+		public Circle() { }
 		public Circle(double rad)//конструктор
 		{
 			this.radius = rad;

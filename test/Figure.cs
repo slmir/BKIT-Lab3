@@ -11,7 +11,7 @@ namespace Lab2
 		public abstract double Area();
 		public override string ToString()
 		{
-			return this.Type + " площадью " + this.Area().ToString();
+			return String.Format( "{0} площадью {1}",this.Type,this.Area().ToString());
 		}
 		public int CompareTo(object obj)
 		{

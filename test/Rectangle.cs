@@ -9,6 +9,7 @@ namespace Lab2
 	{
 			double high;//высота прямоугольника
 			double wdth;//ширина прямоугольника
+			public Rectangle() { }
 			public Rectangle(double hg, double wd)//конструктор
 			{
 				this.high = hg;
