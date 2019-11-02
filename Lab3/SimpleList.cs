@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SimpleListProj
+namespace Lab3
 {
-	public class SimpleList1<T> : IEnumerable<T>//наследование от встроенного интерфейса перечисления
+	public class SimpleList<T> : IEnumerable<T>//наследование от встроенного интерфейса перечисления
 		where T : IComparable
 	{
 		/*первый и последний элементы списка ставим под защиту для работы исключительно в данном классе*/
 		//ссылки на контейнеры 
-		protected SimpleListItem1<T> FirstListElem = null;//первый 
-		protected SimpleListItem1<T> LastListElem = null;//последний 
+		protected SimpleListItem<T> FirstListElem = null;//первый 
+		protected SimpleListItem<T> LastListElem = null;//последний 
 		int count;//защищенное свойство, показывающее количество контейнеров односвязного списка
 		public int Count//свойство, показывающее количество контейнеров
 		{
@@ -28,7 +28,7 @@ namespace SimpleListProj
 		}
 		public void Add(T element)//метод добавления элемента в конец списка
 		{
-			SimpleListItem1<T> newItem = new SimpleListItem1<T>(element);//создание нового контейнера элемента на основе переданных данных
+			SimpleListItem<T> newItem = new SimpleListItem<T>(element);//создание нового контейнера элемента на основе переданных данных
 			this.Count++;
 			/*добавление контейнера к цепочке контейнеров*/
 			if (LastListElem == null)//добавление первого контейнера в список (только для самого первого элента, добавленного в список)
@@ -44,9 +44,9 @@ namespace SimpleListProj
 			}
 		}
 
-		public SimpleListItem1<T> GetElemNumb(int numb)//получение контейнера по его порядковому номеру
+		public SimpleListItem<T> GetElemNumb(int numb)//получение контейнера по его порядковому номеру
 		{
-			SimpleListItem1<T> temp = this.FirstListElem;//создание текущего контейнера и задание его равным первому элементу списка
+			SimpleListItem<T> temp = this.FirstListElem;//создание текущего контейнера и задание его равным первому элементу списка
 			int k = 0;//внутренний счетчик
 			while (k < numb)//пропускаем нужное количество контейнеров путем прохождения от первого до переданного при помощи next так как список односвязный
 			{
@@ -66,7 +66,7 @@ namespace SimpleListProj
 
 		public IEnumerator<T> GetEnumerator()//перебор всех элементов списка и их возврат
 		{
-			SimpleListItem1<T> current = this.FirstListElem;
+			SimpleListItem<T> current = this.FirstListElem;
 			while (current != null)//перебор элементов
 			{
 				yield return current.dataSave;//возврат текущего значения
@@ -110,8 +110,8 @@ namespace SimpleListProj
 
 		private void Swap(int i, int j)//вспомогательный метод для обмена элементов при сортировке
 		{
-			SimpleListItem1<T> ci = GetElemNumb(i);
-			SimpleListItem1<T> cj = GetElemNumb(j);
+			SimpleListItem<T> ci = GetElemNumb(i);
+			SimpleListItem<T> cj = GetElemNumb(j);
 			/*перемена местами двух элементов*/
 			T temp = ci.dataSave;
 			ci.dataSave = cj.dataSave;

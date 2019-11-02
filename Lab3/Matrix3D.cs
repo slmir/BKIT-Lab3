@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Lab2;
 
 namespace Lab3
 {
@@ -66,7 +65,9 @@ namespace Lab3
 			Console.WriteLine("Вывод 'срезов' матрицы по значениям глубины z\nТо есть выводятся двумерные матрицы (параметры x и y) по очереди в соответствии текущему значению z");
 			for (int k = 0; k < this.maxGL_Z; k++)
 			{
+				Console.ForegroundColor = ConsoleColor.White;
 				b.Append("\n" + "Для значения " + "z = " + k + "\n");
+				//Console.ResetColor();
 				for (int j = 0; j < this.maxSTR_Y; j++)
 				{
 					b.Append("[");//открывающая строку двумерного массива скобка
@@ -88,7 +89,7 @@ namespace Lab3
 								b.Append(" - ");
 						}
 					}
-					b.Append("]\n");//закрывающая строку двумерого массива свобка
+					b.Append("]\n\n");//закрывающая строку двумерого массива свобка
 				}
 			}
 			return b.ToString();//возвращение всей строки - трехмерной разреженной матрицы

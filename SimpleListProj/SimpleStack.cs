@@ -6,7 +6,7 @@ using SimpleListProj;
 
 namespace SimpleListProj
 {
-	public class SimpleStack<T> : SimpleList<T> where T : IComparable//наследуется от класса односвязного списка
+	public class SimpleStack<T> : SimpleList1<T> where T : IComparable//наследуется от класса односвязного списка
 	{
 		public void Push(T element)//запись в стек
 		{
@@ -27,7 +27,7 @@ namespace SimpleListProj
 			}
 			else//в списке больше одного элемента
 			{
-				SimpleListItem<T> newLastElem = this.GetElemNumb(this.Count - 2);//новым последним ставится предпоследний элемент списка
+				SimpleListItem1<T> newLastElem = this.GetElemNumb(this.Count - 2);//новым последним ставится предпоследний элемент списка
 																				 //Чтение значения из последнего элемента
 				res = LastListElem.dataSave;//записываем в результат последний эемент
 				this.LastListElem = newLastElem;//теперь предпоследний элемент считается последним

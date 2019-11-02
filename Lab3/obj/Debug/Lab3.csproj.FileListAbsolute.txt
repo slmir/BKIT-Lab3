@@ -1,10 +1,7 @@
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\Lab3.exe.config
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\Lab3.exe
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\Lab3.pdb
-C:\Git\ЛР3 ласт\Lab3\bin\Debug\SimpleListProj.exe
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\test.exe
-C:\Git\ЛР3 ласт\Lab3\bin\Debug\SimpleListProj.pdb
-C:\Git\ЛР3 ласт\Lab3\bin\Debug\SimpleListProj.exe.config
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\test.pdb
 C:\Git\ЛР3 ласт\Lab3\bin\Debug\test.exe.config
 C:\Git\ЛР3 ласт\Lab3\obj\Debug\Lab3.csprojAssemblyReference.cache
