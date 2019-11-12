@@ -26,9 +26,9 @@ namespace Lab3
 			AL.Add(circle);
 			AL.Add(square);
 			AL.Add(rect);
-			/*вывод элементов необобщенного списка до сортировки*/
+			/*вывод элементов необобщенного списка*/
 			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine("Необобщенный список до сортировки:");
+			Console.WriteLine("Необобщенный список:");
 			Console.ResetColor();
 			foreach (object o in AL)
 				Console.WriteLine(o.ToString());

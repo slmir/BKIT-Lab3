@@ -1,0 +1,10 @@
+C:\Git\ЛР3(1)\Lab4 Window Form\bin\Debug\Lab4 Window Form.exe.config
+C:\Git\ЛР3(1)\Lab4 Window Form\bin\Debug\Lab4 Window Form.exe
+C:\Git\ЛР3(1)\Lab4 Window Form\bin\Debug\Lab4 Window Form.pdb
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4 Window Form.csprojAssemblyReference.cache
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4_Window_Form.Form1.resources
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4_Window_Form.Properties.Resources.resources
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4 Window Form.csproj.GenerateResource.cache
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4 Window Form.csproj.CoreCompileInputs.cache
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4 Window Form.exe
+C:\Git\ЛР3(1)\Lab4 Window Form\obj\Debug\Lab4 Window Form.pdb
